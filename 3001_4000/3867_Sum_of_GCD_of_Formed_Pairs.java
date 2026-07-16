@@ -1,6 +1,3 @@
-/**
- * 3867_Sum_of_GCD_of_Formed_Pairs
- */
 public class 3867_Sum_of_GCD_of_Formed_Pairs {
 
 
@@ -36,7 +33,7 @@ public class 3867_Sum_of_GCD_of_Formed_Pairs {
         return sum;
     }
 
-    // GCD Function
+    
     public int gcd(int a, int b) {
 
         while (b != 0) {
