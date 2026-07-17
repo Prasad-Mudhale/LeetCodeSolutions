@@ -49,7 +49,6 @@ public class 3312_Sorted_GCD_Pair_Queries {
             }
             ans[i] = left;
         }
-
         return ans;
     }
 }
