@@ -15,5 +15,4 @@ public class 1979_Find_Greatest_Common_Divisor_of_Array {
             return a;
         return gcd(b, a%b);
     }
-
 }
