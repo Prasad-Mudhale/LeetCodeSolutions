@@ -1,0 +1,42 @@
+package 1000_2000;
+
+public class 1081_Smallest_Subsequence_of_Distinct_Characters {
+    
+    public String smallestSubsequence(String s) {
+        int n = s.length();
+
+        // last[c] = last index at which character c appears
+        int last[] = new int[26];
+        for(int i=0; i<n; i++) {
+            char ch = s.charAt(i);
+            last[ch-'a']= i;
+        }
+
+        Stack<Integer> st = new Stack<>();
+        HashSet<Character> hset = new HashSet<>(); // tracks which chars are currently in the stack
+        for(int i=0; i<n; i++) {
+            char ch = s.charAt(i);
+            if(hset.contains(ch))
+                continue; // already placed; keep its earlier (better) position
+            while(!st.isEmpty()) {
+                char prev = s.charAt(st.peek());
+                if(prev > ch && last[prev-'a']>i) {
+                    st.pop();
+                    hset.remove(prev);
+                } else break;
+            }
+
+            st.push(i);
+            hset.add(ch);
+        }
+
+        // Stack holds indices bottom-to-top; pop reverses order, so reverse back
+        StringBuilder sb = new StringBuilder();
+        while(!st.isEmpty()) {
+            sb.append(s.charAt(st.pop()));
+        }
+        sb.reverse();
+        return sb.toString();
+    }
+
+}
