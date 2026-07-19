@@ -1,5 +1,4 @@
 package 1000_2000;
-
 public class 1081_Smallest_Subsequence_of_Distinct_Characters {
     
     public String smallestSubsequence(String s) {
@@ -38,5 +37,4 @@ public class 1081_Smallest_Subsequence_of_Distinct_Characters {
         sb.reverse();
         return sb.toString();
     }
-
 }
