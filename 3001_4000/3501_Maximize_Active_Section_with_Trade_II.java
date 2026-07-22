@@ -1,5 +1,6 @@
 import java.util.*;
 
+
 class Group {
     int start;
     int length;
@@ -9,6 +10,7 @@ class Group {
         this.length = length;
     }
 }
+
 
 class SparseTable {
     private int n;
