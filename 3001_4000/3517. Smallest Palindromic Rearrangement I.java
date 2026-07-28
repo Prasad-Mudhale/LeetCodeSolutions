@@ -21,6 +21,4 @@ class Solution {
         
         return left + mid + right;
     }
-} 3517. Smallest Palindromic Rearrangement I {
-    
 }
