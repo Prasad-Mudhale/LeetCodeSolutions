@@ -19,8 +19,7 @@ public class 3518. Smallest Palindromic Rearrangement II {
             }
             count[i] = freq[i] / 2;
         }
-
-        // Validity check for palindrome
+        // Validity check for palindromee
         if (oddCount > 1 || (n % 2 == 0 && oddCount > 0)) {
             return "";
         }
